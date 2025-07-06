@@ -9,17 +9,12 @@ module mac_cell (
     output logic [31:0] acc_out
 );
 
-    logic [31:0] mult_result;
-
     always_ff @(posedge clk or posedge rst) begin
         if (rst) begin
-            mult_result <= 0;
             acc_out <= 0;
         end else begin
-            mult_result <= a * b;
-            acc_out <= mult_result + acc_in;
+            acc_out <= (a * b) + acc_in;
         end
     end
 
 endmodule
-
