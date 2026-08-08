@@ -1,0 +1,17 @@
+*.jou
+*.log
+*.cache/
+*.hw/
+*.ip_user_files/
+*.sim/
+*.runs/
+*.gen/
+.Xil/
+*.dcp
+*.bit
+*.wdb
+*.jrn
+*.tmp/
+
+*.md
+!README.md
