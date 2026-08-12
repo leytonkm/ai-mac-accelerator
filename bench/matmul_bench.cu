@@ -8,19 +8,6 @@
 //     ./matmul_bench
 //     ./matmul_bench --jitter-n 64 --jitter-iters 10000
 //
-// Writes bench/results_gpu.csv for model.py to plot.
-//
-// Arithmetic deliberately matches the FPGA: int16 operands accumulated into
-// int32. FP32 would be faster on a 4070 and is what the tensor cores want, but
-// it would not be the same computation the array performs, and the point here
-// is a like-for-like comparison rather than a GPU showcase.
-//
-// Three timings are reported per size, and the distinction matters more than
-// the numbers:
-//   kernel_us  - GPU execution only, measured with CUDA events
-//   launch_us  - wall clock from launch to sync, so it includes launch overhead
-//   e2e_us     - end to end including host-to-device and device-to-host copies
-// The FPGA's 220 ns is a compute-only figure, so kernel_us is its counterpart.
 
 #include <cstdio>
 #include <cstdlib>
