@@ -237,8 +237,7 @@ contention, clock boost transitions, competing processes
 | 56 | 148.96 us | 314.84 ms | 99.953% |
 | 64 | 216.32 us | 410.86 ms | 99.947% |
 
-Machine balance is 12.8 GOPS against a 12.5 MB/s link: 1,024 operations per
-byte. Matmul's arithmetic intensity is N/4 ops per byte, so the two are equal
+Machine balance is 12.8 GOPS against a 12.5 MB/s link: 128,000 ops/byte. Matmul's arithmetic intensity is N/4 ops per byte, so the two are equal
 only at N=4096.
 
 > An earlier measurement put the 8x8 round trip at 15.4 ms. Two thirds of that
